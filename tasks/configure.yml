@@ -29,7 +29,7 @@
     owner: "{{ backup_setup.user }}"
     group: "{{ backup_setup.user }}"
     mode:  0600
-  with_dict: backup_jobs
+  with_dict: "{{ backup_jobs }}"
 
 - name: Configure cron
   template:
